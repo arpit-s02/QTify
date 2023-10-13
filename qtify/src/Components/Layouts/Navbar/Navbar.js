@@ -5,7 +5,7 @@ import "./Navbar.css"
 
 export default function Navbar(){
     return(
-        <nav class = "navbar">
+        <nav className = "navbar">
             <Logo />
 
             <SearchBar />

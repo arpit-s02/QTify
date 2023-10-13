@@ -2,7 +2,7 @@ import "./FeedbackButton.css"
 
 export default function FeedbackButton(){
     return(
-        <button class = "feedbackButton">
+        <button className = "feedbackButton">
             Give Feedback
         </button>
     )

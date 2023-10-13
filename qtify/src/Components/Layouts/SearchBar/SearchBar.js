@@ -2,14 +2,14 @@ import "./SearchBar.css"
 
 export default function SearchBar(){
     return(
-        <div class = "searchBar">
+        <div className = "searchBar">
             <input
                 type = "text"
                 name = "search"
                 placeholder = "Search a album of your choice"
             />
 
-            <button class = "searchButton">
+            <button className = "searchButton">
                 <svg 
                     width="20" 
                     height="20" 
