@@ -1,0 +1,33 @@
+.heroSection{
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+}
+
+.heroContent{
+    width: 799px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroText p{
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0px;
+}
+
+.heroSection p:first-child{
+    margin-bottom: 4px;
+}
+
+.vibratingHeadphone{
+    width: 212px;
+    height: 212px;
+}
