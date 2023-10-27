@@ -1,6 +1,6 @@
-import FeedbackButton from "../FeedbackButton/FeedbackButton"
-import Logo from "../Logo/Logo"
+import Button from "../Button/Button"
 import SearchBar from "../SearchBar/SearchBar"
+import {ReactComponent as Logo} from "../../../assets/logo.svg"
 import "./Navbar.css"
 
 export default function Navbar(){
@@ -10,7 +10,9 @@ export default function Navbar(){
 
             <SearchBar />
 
-            <FeedbackButton />
+            <Button 
+                text = "Give Feedback"
+            />
         </nav>
     )
 }

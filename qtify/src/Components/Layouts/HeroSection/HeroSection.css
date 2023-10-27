@@ -4,25 +4,16 @@
     justify-content: center;
     align-items: center;
     background-color: #121212;
-}
-
-.heroContent{
-    width: 799px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 32px;
 }
 
 .heroText p{
-    color: white;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
+    color: #FFF;
     text-align: center;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
     margin: 0px;
-}
-
-.heroSection p:first-child{
-    margin-bottom: 4px;
 }

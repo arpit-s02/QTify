@@ -1,0 +1,33 @@
+.carousel{
+    padding: 32px;
+}
+
+.carouselHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carouselHeader .albumName{
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--light);
+}
+
+.carouselHeader .toggleButton{
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--primary);
+}
+
+.albums{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
