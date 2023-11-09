@@ -2,11 +2,12 @@ import Navbar from "../../Layouts/Navbar/Navbar";
 import HeroSection from "../../Layouts/HeroSection/HeroSection";
 import AlbumSection from "../../Layouts/AlbumSection/AlbumSection";
 import SongsSection from "../../Layouts/SongsSection/SongsSection";
+import FAQ from "../../Layouts/FAQ/FAQ";
 
 export default function HomePage(){
     return(
 
-        <div>
+        <>
             <Navbar />
             
             <HeroSection />
@@ -21,6 +22,8 @@ export default function HomePage(){
 
             <SongsSection />
 
-        </div>
+            <FAQ />
+
+        </>
     )
 }
