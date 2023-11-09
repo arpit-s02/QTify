@@ -1,0 +1,27 @@
+.genreContainer{
+    display: flex;
+    column-gap: 28px;
+    margin-bottom: 23px;
+}
+
+.genreButton{
+    width: 68px;
+    background-color: inherit;
+    border: 0px;
+    color: white;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: all ease-in-out 0.2s;
+}
+
+.genreButton:active{
+    transform: scale(0.8);
+}
+
+.selectedGenre{
+    border-bottom: 2px solid var(--primary);
+    border-radius: 2px;
+}

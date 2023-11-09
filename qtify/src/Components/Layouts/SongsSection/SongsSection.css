@@ -1,0 +1,31 @@
+.songsSection{
+    padding: 32px;
+}
+
+.songsSection .header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+}
+
+.songsSection .header .heading{
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--light);
+    text-transform: capitalize;
+}
+
+.songsSection .header .toggleButton{
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--primary);
+    background-color: inherit;
+    border: 0px;
+}

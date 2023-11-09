@@ -1,33 +1,12 @@
-.carousel{
-    padding: 32px;
+.swiperContainer{
+    position: relative;
 }
 
-.carouselHeader{
-    display: flex;
-    justify-content: space-between;
+.swiperContainer .carousel{
+    position: static;
+    padding: 0px 4px!important;
 }
 
-.carouselHeader .albumName{
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--light);
-}
-
-.carouselHeader .toggleButton{
-    text-align: right;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--primary);
-}
-
-.albums{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+.swiperContainer .carousel .swiper-slide{
+    width: auto;
 }

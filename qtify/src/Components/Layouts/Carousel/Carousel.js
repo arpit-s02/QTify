@@ -1,54 +1,71 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
 import Card from "../Card/Card";
-import "./Carousel.css";
+import NextButton from "../NextButton/NextButton";
+import PreviousButton from "../PreviousButton/PreviousButton";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
+import { useEffect, useState } from "react";
 
-export default function Carousel(){
+import "swiper/css";
+import "./Carousel.css"
 
-    const [albums, setAlbums] = useState([]);
+const Controls = ({cardsData, setIsBeginning, setIsEnd}) => {
 
-    const fetchAlbums = async () => {
-
-        try {
-            const response = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
-
-            return response.data;
-            
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    const swiper = useSwiper();
 
     useEffect(() => {
-        (async () => {
-            const data = await fetchAlbums();
+        swiper.slideTo(0, 500);
+        setIsBeginning(swiper.isBeginning);
+        setIsEnd(swiper.isEnd);
+    }, [cardsData, swiper]);
 
-            setAlbums(data);
-        })();
-    }, []);
+    swiper.on('slideChange', () => {
+        setIsBeginning(swiper.isBeginning);
+        setIsEnd(swiper.isEnd);
+    })
+}
+
+const Carousel = ({cardsData, type}) => {
+
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(true);
 
     return(
-        <div className="carousel">
-                <div className="carouselHeader">
-                    <p className="albumName">Top Albums</p>
-                    <p className="toggleButton">Collapse</p>
-                </div>
+        <div className="swiperContainer">
+            <Swiper
+                slidesPerView={'auto'}
+                spaceBetween={40}
+                className="carousel"
+                initialSlide={0}
+            >
+                <Controls 
+                    cardsData = {cardsData}
+                    setIsBeginning = {setIsBeginning}
+                    setIsEnd = {setIsEnd}
+                />
+            
+                <PreviousButton 
+                    isBeginning = {isBeginning}
+                />
 
-                <div className="albums">
-                    {
-                        albums.map((album) => {
-                            return (
-                                <Card
-                                    key = {album.id}
-                                    title = {album.title}
-                                    followers={album.follows}
-                                    img={album.image}
+                <NextButton 
+                    isEnd = {isEnd}
+                />
+                
+                {
+                    cardsData.map((cardData) => {
+                        return (
+                            <SwiperSlide key = {cardData.id}>
+                                <Card 
+                                    cardData = {cardData}
+                                    type = {type}
                                 />
-                            )
-                        })
-                    }
-                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+                
+            </Swiper>
         </div>
     );
 }
+
+export default Carousel;
